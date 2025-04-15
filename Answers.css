@@ -1,0 +1,110 @@
+/* 🔄 RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* 🧭 NAVBAR STYLES */
+  .navbar {
+    display: flex;                        /* Flexbox used here */
+    justify-content: space-between;      /* Spread items */
+    align-items: center;                 /* Center vertically */
+    background: #0d1b2a;
+    color: #fff;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;                     /* Allow wrapping on smaller screens */
+  }
+  
+  .brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #00c896;                      /* Hover effect */
+  }
+  
+  /* 🧱 GRID LAYOUT STYLES */
+  .layout {
+    display: grid;                       /* Grid layout here */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .hero {
+    grid-column: 1 / -1;                /* Span full width */
+    background: linear-gradient(135deg, #00c896, #007c7c);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .content-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .content-card:hover {
+    transform: translateY(-5px);         /* Slight lift on hover */
+  }
+  
+  /* 🦶 FOOTER */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background: #030e1a;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  /* 📱 MEDIA QUERIES FOR RESPONSIVENESS */
+  
+  /* Tablet Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .nav-menu li {
+      padding: 0.5rem 0;
+    }
+  
+    .layout {
+      padding: 1rem;
+    }
+  }
+  
